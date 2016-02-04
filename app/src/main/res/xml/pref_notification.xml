@@ -1,0 +1,42 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <CheckBoxPreference
+        android:key="notifications_sound"
+        android:title="@string/pref_notifications_sound_title"
+        android:summary="@string/pref_notifications_sound_summary"
+        android:defaultValue="true" />
+
+    <RingtonePreference
+        android:dependency="notifications_sound"
+        android:key="notifications_ringtone"
+        android:title="@string/pref_notifications_ringtone_title"
+        android:ringtoneType="notification"
+        android:summary="@string/pref_ringtone_summary"
+        android:defaultValue="content://settings/system/notification_sound" />
+
+    <CheckBoxPreference
+        android:key="notifications_vibrate"
+        android:title="@string/pref_notifications_vibrate_title"
+        android:summary="@string/pref_notifications_vibrate_summary"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="notifications_navbar"
+        android:title="@string/pref_notifications_navbar_title"
+        android:summary="@string/pref_notifications_navbar_summary"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="notifications_popup"
+        android:title="@string/pref_notifications_popup_title"
+        android:summary="@string/pref_notifications_popup_summary"
+        android:defaultValue="true" />
+
+    <seedling.corp.recyclerviewpractice.preferences.ThemeDialogPreference
+        android:key="notifications_theme"
+        android:title="@string/pref_theme_title"
+        android:summary="@string/pref_theme_summary"
+        />
+</PreferenceScreen>

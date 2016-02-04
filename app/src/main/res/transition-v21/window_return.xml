@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="sequential">
+
+    <transition class="seedling.corp.recyclerviewpractice.utils.ScaleTransition"
+        android:interpolator="@android:interpolator/fast_out_linear_in"
+        android:duration="@android:integer/config_shortAnimTime">
+        <targets>
+            <target android:targetId="@id/fab_save_time" />
+            <target android:targetId="@id/fab_save_loc" />
+        </targets>
+    </transition>
+
+    <explode>
+        <targets>
+            <target android:targetClass="android.widget.TextView" />
+            <target android:targetClass="android.widget.FrameLayout" />
+            <target android:targetClass="android.widget.LinearLayout" />
+            <target android:targetClass="android.widget.ImageView" />
+            <target android:excludeId="@id/fab_save_time" />
+            <target android:excludeId="@id/fab_save_loc" />
+        </targets>
+    </explode>
+
+</transitionSet>

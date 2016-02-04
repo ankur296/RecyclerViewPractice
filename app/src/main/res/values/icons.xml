@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fa_icon_title">&#xf03a;</string>
+    <string name="fa_icon_date">&#xf073;</string>
+    <string name="fa_icon_reminder">&#xf017;</string>
+    <string name="fa_icon_repeat">&#xf01e;</string>
+    <string name="fa_icon_pic">&#xf03e;</string>
+    <string name="fa_icon_loc">&#xf041;</string>
+    <string name="fa_icon_radius">&#xf140;</string>
+    <string name="fa_icon_radius_info">&#xf059;</string>
+</resources>

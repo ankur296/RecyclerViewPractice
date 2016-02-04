@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/lay_popup"
+              android:orientation="vertical"
+              android:layout_width="400dp"
+              android:layout_height="400dp"
+              android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/title_popup_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/popup_pic_iv"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="85dp"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/popup_no"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/popup_button_margin"
+            android:background="@drawable/custom_button"
+            />
+
+        <Button
+            android:id="@+id/button_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/popup_button_margin"
+            android:text="@string/popup_yes"
+            android:textStyle="bold"
+            android:background="@drawable/custom_button"
+            />
+    </LinearLayout>
+</LinearLayout>

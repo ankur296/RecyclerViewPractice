@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/category_item"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:ignore="UseCompoundDrawables"
+              android:background="@color/light_grey"
+              android:orientation="vertical"
+              android:gravity="center">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin_8">
+
+        <LinearLayout
+            android:id="@+id/card_lay"
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/tv_alarm_icon"
+                android:src="@mipmap/ic_action_alarm"
+                android:layout_gravity="left"/>
+
+            <ImageView
+                android:id="@+id/category_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/category_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:paddingTop="@dimen/spacing_double"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

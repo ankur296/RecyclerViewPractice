@@ -1,0 +1,110 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/light_grey</item>
+        <item name="android:colorBackground">@color/light_grey</item>
+        <item name="android:dialogTheme">@style/myDialog</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlHighlight">?colorAccent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <!--enabling transitions-->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+
+        <!--for transitions-->
+        <item name="android:windowExitTransition">@transition/fade</item>
+        <item name="android:windowReenterTransition">@transition/fade</item>
+        <item name="android:windowEnterTransition">@transition/window_enter</item>
+        <item name="android:windowReturnTransition">@transition/window_return</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/shared_move</item>
+        <item name="android:windowSharedElementExitTransition">@transition/shared_move</item>
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+
+        <!--for action bar in frag-->
+        <!--<item name="windowActionBarOverlay">true</item>-->
+        <!--<item name="actionBarStyle">@style/ActionBar.Detail</item>-->
+    </style>
+
+    <style name="AppTheme.Detail" parent="AppTheme">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="actionBarStyle">@style/ActionBar.Detail</item>
+    </style>
+
+    <style name="ActionBar.Detail" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@color/transparent_actionbar_background</item>
+        <item name="displayOptions">showHome|homeAsUp</item>
+    </style>
+
+    <style name="AppTheme.Red" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary_RED</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_RED</item>
+        <item name="colorAccent">@color/colorAccent_RED</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark_RED</item>
+        <item name="android:dialogTheme">@style/myDialog.Red</item>
+    </style>
+
+
+    <style name="AppTheme.Detail.Red" parent="AppTheme.Detail">
+        <item name="colorPrimary">@color/colorPrimary_RED</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_RED</item>
+        <item name="colorAccent">@color/colorAccent_RED</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark_RED</item>
+        <item name="android:dialogTheme">@style/myDialog.Red</item>
+        <item name="windowActionBar">true</item>
+    </style>
+
+
+    <style name="AppTheme.Green" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary_GREEN</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_GREEN</item>
+        <item name="colorAccent">@color/colorAccent_GREEN</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark_GREEN</item>
+        <item name="android:dialogTheme">@style/myDialog.Green</item>
+    </style>
+
+
+    <style name="myDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorAccent">?colorAccent</item>
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+    <!--Date picker-->
+    <style name="myDialog.Green" parent="myDialog">
+        <item name="colorAccent">@color/colorPrimary_GREEN</item>
+    </style>
+
+    <style name="myDialog.Red" parent="myDialog">
+        <item name="colorAccent">@color/colorPrimary_RED</item>
+    </style>
+
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.GenericTheme" parent="ThemeOverlay.AppCompat.ActionBar"/>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Grid.Item" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">@dimen/category_item_text_size</item>
+    </style>
+
+
+</resources>

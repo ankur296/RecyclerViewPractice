@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="seedling.corp.recyclerviewpractice.fragment.CreateLocReminderFrag">
+
+    <ScrollView
+        android:id="@+id/scrollView_create_loc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:scrollbarStyle="outsideOverlay"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/lay_create_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/imageview_height"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                android:transitionName="image" />
+
+            <GridLayout
+                android:id="@+id/grid_lay_loc_frag"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rowCount="5"
+                android:columnCount="3">
+
+
+                <TextView
+                    android:id="@+id/tv_title_icon"
+                    style="@style/MyAwesomeFontTextView"
+                    android:text="@string/fa_icon_title"/>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:text="@string/field_title"
+                    style="@style/FieldTitle"/>
+
+                <EditText
+                    android:id="@+id/edit_title"
+                    android:selectAllOnFocus="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    style="@style/FieldValue"/>
+
+
+
+                <TextView
+                    android:id="@+id/tv_loc_icon"
+                    style="@style/MyAwesomeFontTextView"
+                    android:text="@string/fa_icon_loc"/>
+
+                <TextView
+                    android:id="@+id/tv_loc"
+                    android:text="@string/field_loc"
+                    style="@style/FieldTitle"/>
+
+                <TextView
+                    android:id="@+id/tv_search_loc"
+                    android:text="@string/field_loc_search"
+                    style="@style/FieldValue"/>
+
+
+
+                <TextView
+                    android:id="@+id/tv_radius_icon"
+                    style="@style/MyAwesomeFontTextView"
+                    android:text="@string/fa_icon_radius"/>
+
+                <TextView
+                    android:id="@+id/tv_radius"
+                    android:text="@string/field_radius"
+                    style="@style/FieldTitle"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                    <EditText
+                        android:id="@+id/edit_radius"
+                        android:hint="@string/field_radius_hint"
+                        style="@style/FieldValue"/>
+
+                    <TextView
+                        android:id="@+id/tv_radius_info_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/MyAwesomeFontTextView"
+                        android:text="@string/fa_icon_radius_info"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_repeat_icon"
+                    style="@style/MyAwesomeFontTextView"
+                    android:text="@string/fa_icon_repeat"/>
+
+                <TextView
+                    android:id="@+id/tv_repeat"
+                    android:text="@string/field_repeat"
+                    style="@style/FieldTitle"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_group_repeat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="@dimen/spacing_double"
+                    android:layout_marginLeft="@dimen/spacing_double"
+                    android:orientation="horizontal">
+
+                    <RadioButton android:id="@+id/radio_repeat_next"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="@string/field_repeat_next"/>
+
+                    <RadioButton android:id="@+id/radio_repeat_every"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="@string/field_repeat_every"/>
+                </RadioGroup>
+
+
+
+                <TextView
+                    android:id="@+id/tv_attach_icon"
+                    style="@style/MyAwesomeFontTextView"
+                    android:text="@string/fa_icon_pic"/>
+
+                <TextView
+                    android:id="@+id/tv_attach"
+                    android:text="@string/field_attach"
+                    style="@style/FieldTitle"/>
+
+                <TextView
+                    android:id="@+id/tv_choose_img"
+                    android:text="@string/field_pic_hint"
+                    style="@style/FieldValue"/>
+
+            </GridLayout>
+
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:layout_width="match_parent"
+                      android:layout_height="250dp"
+                      android:layout_marginTop="10dp"
+                      android:id="@+id/map"
+                      android:layout_gravity="bottom|center_horizontal"
+                      android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_save_loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/iv_pic"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginTop="175dp"
+        android:transitionName="fab"
+        android:src="@mipmap/ic_action_tick"/>
+
+</android.support.design.widget.CoordinatorLayout>

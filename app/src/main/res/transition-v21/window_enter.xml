@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="sequential"
+    >
+
+    <explode>
+        <targets>
+            <target android:targetClass="android.widget.TextView" />
+            <target android:targetClass="android.widget.FrameLayout" />
+            <target android:targetClass="android.widget.LinearLayout" />
+            <target android:targetClass="android.widget.ImageView" />
+        </targets>
+    </explode>
+
+    <transition class="seedling.corp.recyclerviewpractice.utils.ScaleTransition"
+                android:interpolator="@android:interpolator/overshoot"
+                 >
+        <targets>
+            <target android:targetId="@id/fab_save_time" />
+            <target android:targetId="@id/fab_save_loc" />
+        </targets>
+    </transition>
+
+
+</transitionSet>
