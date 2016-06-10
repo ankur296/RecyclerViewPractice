@@ -13,7 +13,8 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+//chk git--ankur
+        //test3
         SharedPreferences preferences = this.getSharedPreferences("misc",MODE_PRIVATE);
 
         boolean firstLaunch = preferences.getBoolean("first_launch", true);
